@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>Adding Date-Time Picker to Input Field using jQuery by CodexWorld</title>
+<link rel="stylesheet" type="text/css" href="jquery.datetimepicker.css"/>
+<script src="jquery.min.js"></script>
+</head>
+<body>
+
+<p>DateTimePicker</p>
+<input type="text" id="datetimepicker1"/>
+    
+<p>Inline DateTimePicker</p>
+<input type="text" id="datetimepicker2"/>
+
+<p>MinDate & MaxDate DateTimePicker</p>
+<input type="text" id="datetimepicker3"/>
+
+<p>MinTime & MaxTime DateTimePicker</p>
+<input type="text" id="datetimepicker4"/>
+
+<p>Step Time DateTimePicker</p>
+<input type="text" id="datetimepicker5"/>
+
+<p>On Select Date DateTimePicker</p>
+<input type="text" id="datetimepicker6"/>
+
+<p>On Select Time DateTimePicker</p>
+<input type="text" id="datetimepicker7"/>
+
+<script src="jquery.datetimepicker.full.js"></script>
+<script type="text/javascript">
+$('#datetimepicker1').datetimepicker({
+    format:'Y-m-d H:i',
+});
+
+$('#datetimepicker2').datetimepicker({
+    format:'Y-m-d H:i',
+    inline:true
+});
+
+$('#datetimepicker3').datetimepicker({
+    format:'Y-m-d H:i',
+    minDate:'2016-04-05',
+    maxDate:'2016-04-28'
+});
+
+$('#datetimepicker4').datetimepicker({
+    format:'Y-m-d H:i',
+    minTime:'09:00',
+    maxTime:'20:00'
+});
+
+$('#datetimepicker5').datetimepicker({
+    format:'Y-m-d H:i',
+    step:15
+});
+
+$('#datetimepicker6').datetimepicker({
+    format:'Y-m-d H:i',
+    onSelectDate:function(current_time, $input){
+        var selectedDate = $input.val();
+        alert(selectedDate);
+    }
+});
+
+$('#datetimepicker7').datetimepicker({
+    format:'Y-m-d H:i',
+    onSelectTime:function(current_time, $input){
+        var selectedDate = $input.val();
+        alert(selectedDate);
+    }
+});
+</script>
+</body>
+</html>
